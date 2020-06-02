@@ -22,7 +22,7 @@ document.getElementById('loan-form').addEventListener('submit',function(e){
 });
 
 function calculateresult(){
-    console.log("calculating ...")
+   
 
     const UIamount = document.getElementById('amount');
     const UIInterest = document.getElementById('interest');
@@ -39,7 +39,7 @@ function calculateresult(){
     const x = Math.pow(1 + calInterest,calPayments);
     const monthly = (principle *x *calInterest)/(x-1);
 
-    if(isFinite(monthly)){
+    if(isFinite(monthly) || monthly >0 || x>0){
         UImonthlypayment.value = monthly.toFixed(2);
         UItotalPayment.value =(monthly*calPayments).toFixed(2);
         UItotalinterest.value = ((monthly*calPayments)-principle).toFixed(2);

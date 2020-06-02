@@ -37,17 +37,19 @@ function calculateresult(){
 
     //monthly 
     const x = Math.pow(1 + calInterest,calPayments);
-    const monthly = (principle *x *calInterest)/(x-1);
+    const monthly = (principle * x *calInterest)/(x-1);
 
     if(isFinite(monthly) || monthly > 0 || x>0 || calInterest >0 || calPayments>0 ||
-    principle > 0){
+    principle > 0 ){
         UImonthlypayment.value = monthly.toFixed(2);
         UItotalPayment.value =(monthly*calPayments).toFixed(2);
         UItotalinterest.value = ((monthly*calPayments)-principle).toFixed(2);
         document.getElementById('result').style.display = 'block';
         document.getElementById('loading').style.display= 'none';
-
-
+    }
+    else if(monthly <0 || x < 0 || calPayments <0 calInterest < 0 || principle <0)
+    {
+        showError('Please check your numbers')
 
     }
 else{

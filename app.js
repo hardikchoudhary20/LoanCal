@@ -39,7 +39,7 @@ function calculateresult(){
     const x = Math.pow(1 + calInterest,calPayments);
     const monthly = (principle * x *calInterest)/(x-1);
 
-    if(isFinite(monthly) || monthly > 0 || x>0 || calInterest >0 || calPayments>0 ||principle > 0 )
+    if(isFinite(monthly) && monthly > 0 && x>0 && calInterest >0 && calPayments>0 &&principle > 0 )
     {
         UImonthlypayment.value = monthly.toFixed(2);
         UItotalPayment.value =(monthly*calPayments).toFixed(2);

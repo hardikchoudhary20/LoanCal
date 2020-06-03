@@ -52,46 +52,12 @@ function calculateresult(){
         showError('Please check your numbers')
 
     }
-    else if( x < 0 )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( calPayments <0  )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( principle <0 )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( UIInterest < 0  )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( UIamount < 0  )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( UItotalPayment <0 )
-    {
-        showError('Please check your numbers')
-
-    }
-    else if( UIyears <0 )
-    {
-        showError('Please check your numbers')
-
-    }
+    
 else{
     showError('Please check your numbers')
 }
 
-}
+
 
 function  showError(error){
      

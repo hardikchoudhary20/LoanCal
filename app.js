@@ -47,7 +47,42 @@ function calculateresult(){
         document.getElementById('result').style.display = 'block';
         document.getElementById('loading').style.display= 'none';
     }
-    else if(monthly <0 || x < 0 || calPayments <0 || principle <0 || UIInterest < 0 || UIamount<0 || UItotalPayment <0 || UIyears <0)
+    else if(monthly <0 || x < 0 || calPayments <0 || principle <0 || UIInterest < 0 || UIamount < 0 || UItotalPayment <0 || UIyears <0 )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( x < 0 )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( calPayments <0  )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( principle <0 )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( UIInterest < 0  )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( UIamount < 0  )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( UItotalPayment <0 )
+    {
+        showError('Please check your numbers')
+
+    }
+    else if( UIyears <0 )
     {
         showError('Please check your numbers')
 

@@ -1,24 +1,12 @@
-console.log('1')
+
 //for submit (calculate)
 document.getElementById('loan-form').addEventListener('submit',function(e){
-    
     //hide results
     document.getElementById('result').style.display = 'none';
-    
-    
     //show loader
     document.getElementById('loading').style.display= 'block';
-
-    setTimeout(calculateresult,2000);
-
-
-    
-    
-    
-    e.preventDefault();
-
-
-
+ setTimeout(calculateresult,2000);
+e.preventDefault();
 });
 
 function calculateresult(){
@@ -57,7 +45,7 @@ else{
     showError('Please check your numbers')
 }
 
-
+}
 
 function  showError(error){
      
